@@ -13,4 +13,16 @@ model User {
   email     String   @unique
   password  String
   createdAt DateTime @default(now())
+   prompts   Prompt[]
+}
+model Prompt {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  category    String
+  content     String
+  createdAt   DateTime @default(now())
+
+  userId      Int
+  user        User @relation(fields: [userId], references: [id])
 }
