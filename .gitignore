@@ -1,5 +1,12 @@
 node_modules
+<<<<<<< HEAD
 # Keep environment variables out of version control
 .env
 
 /src/generated/prisma
+=======
+.env
+dist
+build
+coverage
+>>>>>>> b456b2014369956679047b828db02f4220eea5ac
